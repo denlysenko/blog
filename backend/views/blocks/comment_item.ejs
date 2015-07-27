@@ -1,0 +1,29 @@
+
+	<% comments.forEach(function(comment) { %>
+		<div class="comment-item">
+			<div class="comments-header">
+				<div class="name">
+					<h4><%= comment.author %></h4>
+				</div>
+			</div>
+			<div class="comments-body">
+				<%= comment.body %>
+			</div>
+			<a href="#" data-toggle="reply">Reply</a>
+			<form action="/post/<%= post._id %>/send_comment" method="post">
+				<div class="form-group">
+					<input type="text" name="name" placeholder="Name" data-validate="required">
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Email" data-validate="required">
+				</div>
+				<div class="form-group">
+					<textarea name="comment" placeholder="Comment" data-validate="required"></textarea>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn">Reply</button>
+				</div>
+			</form>
+		</div>
+<% }) %>
+	

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<link rel="stylesheet" href="css/blog.min.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<img src="images/bg/header_bg.png" height="403" width="1220" alt="header_bg">
+		</header>
+			<div class="top-nav">
+				<nav>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown">Category</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Diary</a></li>
+								<li><a href="#">Personal</a></li>
+								<li><a href="#">Holiday</a></li>
+								<li><a href="#">Work</a></li>
+								<li><a href="#">Family</a></li>
+							</ul>
+						</li>
+						<li class="active"><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="greeting">
+					<div class="avatar">
+						<img src="images/bg/avatar.png" height="197" width="197" alt="avatar">
+					</div>
+				</div>
+			</div>
+		<div class="content">
+			<div class="post contact">
+				<div class="body">
+				<h3>Please, fill the form to contact me</h3>
+				<form action="/" method="post" id="contact">
+					<div class="form-group">
+						<label for="name">Your name</label>
+						<input type="text" name="name" id="name" placeholder="Name" data-validate="required">
+					</div>
+					<div class="form-group">
+						<label for="email">Your Email</label>
+						<input type="email" name="email" id="email" placeholder="Email" data-validate="required">
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message</label>
+						<textarea name="message" id="message" placeholder="Message" data-validate="required"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Send Message</button>
+					</div>
+				</form>
+			</div>		
+		</div>
+		<footer>
+			Copyrights (c) Fikristudio 2014
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts/dropdown.js"></script>
+	<script src="js/scripts/scripts.js"></script>
+	<script src="js/scripts/validator.js"></script>
+</body>
+</html>

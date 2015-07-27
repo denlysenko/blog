@@ -1,0 +1,24 @@
+<%- include('blocks/top') %>
+<header>
+	<img src="<%= user.logo %>" height="403" width="1220" alt="header_bg">
+</header>
+<div class="container">
+	<%- include('blocks/nav') %>		
+		<div class="content">
+			<div class="post">
+				<%- include('blocks/post_header' , {post: post}) %>
+				<div class="body">
+					<h3><%= post.title %></h3>
+					<%- post.body %>
+					<% if(post.images.length){ post.images.forEach(function(image, num){ %>
+						<img src="<%= image %>" height="485" width="732" alt="photo<%= num %>">
+					<%})}%>
+				</div>
+				<div class="footer">
+					<div class="comments"><%= post._comments.length %> Comments</div>
+				</div>
+				<%- include('blocks/comments', {post: post})%>
+			</div>
+		</div>
+<%- include('blocks/bottom') %>
+

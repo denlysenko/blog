@@ -1,0 +1,10 @@
+<% if(posts.length) { posts.forEach(function(post) { %>
+<div class="preview">
+	<%- include('post_header' , {post: post}) %>
+	<div class="body">
+		<h3><%= post.title %></h3>
+		<%- post.body %>
+	</div>
+	<a href="/post/<%= post.url %>" class="more">Read More</a>
+</div>
+<% })} %>

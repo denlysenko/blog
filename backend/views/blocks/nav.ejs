@@ -1,0 +1,26 @@
+<div class="top-nav">
+	<nav>
+		<ul>
+			<li <% if(page === '/'){ %>class="active" <% } %>><a href="/">Home</a></li>
+			<li <% if(page === 'about'){ %>class="active" <% } %>><a href="/about">About</a></li>
+			<li class="dropdown"><a href="#" data-toggle="dropdown">Category</a>
+				<ul class="dropdown-menu">
+					<li><a href="/category/diary">Diary</a></li>
+					<li><a href="/category/personal">Personal</a></li>
+					<li><a href="/category/holiday">Holiday</a></li>
+					<li><a href="/category/work">Work</a></li>
+					<li><a href="/category/family">Family</a></li>
+				</ul>
+			</li>
+			<li <% if(page === 'contact'){ %>class="active" <% } %>><a href="/contact">Contact</a></li>
+		</ul>
+	</nav>
+	<div class="greeting">
+		<div class="avatar">
+			<img src="<%= user.avatar %>" height="197" width="197" alt="avatar">
+		</div>
+		<% if(page === '/'){ %>
+			<h3>Hello! Welcome to my Blog!</h3>
+		<% } %>	
+	</div>
+</div>

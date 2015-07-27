@@ -1,0 +1,16 @@
+<%- include('blocks/top') %>
+<header>
+	<img src="<%= user.logo %>" height="403" width="1220" alt="header_bg">
+</header>
+<div class="container">
+	<%- include('blocks/nav') %>		
+		<div class="content">
+			<div class="post">
+				<div class="body">
+					<h3><%= title %></h3>
+					<%- user.info %>
+				</div>		
+			</div>
+		</div>	
+			
+<%- include('blocks/bottom') %>

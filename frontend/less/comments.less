@@ -1,0 +1,169 @@
+.comments-section {
+  margin-top: 36px;
+}
+
+.post-comment {
+  border-bottom: 1px solid @gray-light;
+  padding-bottom: 15px;
+  .clearfix();
+
+   h4 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .07em;
+    margin-bottom: 41px;
+  }
+
+  label {
+    font-size: @font-size-base - 4;
+    font-weight: bold;
+
+    @media(min-width: @screen-md-min) {
+      line-height: 49px;
+    }
+  }
+
+  input {
+    height: 49px;
+  }
+
+  textarea {
+    height: 193px;
+  }
+
+  button {
+    .make-sm-column-offset(3);
+    .make-xs-column(12);
+
+    &:active,
+    &:focus {
+      box-shadow: inset 0 0 6px rgba(0,0,0,.37);
+    }
+  }
+
+  form {
+    .make-sm-column(10);
+    .make-sm-column-offset(1);
+  }
+
+  .form-group {
+    .make-sm-column(12);
+    label,
+    input,
+    button,
+    textarea {
+      .make-sm-column(6);
+    }
+
+    #name {
+      margin-bottom: 10px;
+    }
+
+    @media(min-width: @screen-sm-min) {
+      #name,
+      #email {
+        width: 48%;
+      }
+      #name {
+        float: right;
+        margin-bottom: 0;
+      }
+      #email {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .form-row {
+    .make-row();
+    margin-bottom: 20px;
+
+    &:first-of-type .form-group {
+      .make-sm-column(6);
+      label {
+        width: 44%;
+      }
+    }
+    
+    &:nth-of-type(2) .form-group {
+      label {
+        .make-sm-column(3);
+      }
+    }
+  }
+}
+
+.comments-list {
+  margin-top: 40px;
+
+  .btn.more {
+    color: @body-bg;
+    text-align: center;
+    margin: 20px auto 0;
+    width: 60%;
+
+    @media(min-width: @screen-sm-min) {
+      width: 27%;
+    }
+  }
+
+  a {
+    display: block;
+    color: @brand-primary;
+    margin: 20px 0 0 136px;
+  }
+
+  form {
+    display: none;
+    margin-left: 140px;
+
+    input,
+    textarea {
+      width: 60%;
+      margin-top: 20px;
+    }
+
+    input {
+      height: 40px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 8px 16px;
+    }
+  }
+}
+
+
+.comments-header {
+  h4 {
+    position: relative;
+    color: @brand-primary;
+    font-weight: bold;
+    padding-left: 120px;
+    line-height: 120px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -14px;
+      display: block;
+      width: 120px;
+      height: 120px;
+      background: @gray-light;
+      border-radius: 100%;
+    }
+  }
+}
+
+.comments-body {
+  width: 67%;
+  margin: -25px 0 0 120px;
+  background: @gray-light;
+  border-radius: @border-radius-base;
+  padding: 10px;
+}

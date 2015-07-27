@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blog</title>
+	<link rel="stylesheet" href="css/blog.min.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="top-nav">
+				<nav>
+					<ul>
+						<li class="active"><a href="admin.html">Main Info</a></li>
+						<li class="dropdown"><a href="#" data-toggle="dropdown">Posts</a>
+							<ul class="dropdown-menu">
+								<li><a href="new.html">New Post</a></li>
+								<li><a href="edit.html">Edit Posts</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Logout</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="content">
+			<div>
+				<h4>Change Password</h4>
+				<form action="" method="post">
+					<div class="form-group">
+						<label for="old_password">Current Password</label>
+						<input type="password" name="oldPassword" placeholder="Enter Current Password" id="old_password">
+					</div>
+					<div class="form-group">
+						<label for="new_password">New Password</label>
+						<input type="password" name="newPassword" placeholder="Enter New Password" id="new_password">
+					</div>
+					<div class="form-group">
+						<label for="check_password">Repeat Password</label>
+						<input type="password" name="checkPassword" placeholder="Repeat New Password" id="check_password" data-validate="required equal">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Change Password</button>
+					</div>
+				</form>
+			</div>
+			<div>
+				<h4>Change Main Info</h4>
+				<form action="/" methos="post">
+					<div class="form-group">
+						<label for="old_info">Current Info</label>
+						<textarea name="oldInfo" id="old_info"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="new_info">New Info</label>
+						<textarea name="newInfo" id="new_info" placeholder="Enter New Info"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Change Info</button>
+					</div>
+				</form>
+			</div>
+			<div>
+				<h4>Change Avatar</h4>
+				<form action="/" methos="post">
+					<div class="form-group">
+						<label for="avatar">Load Avatar</label>
+						<input type="file" name="avatar" id="avatar">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Change Avatar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<footer>
+			Copyrights (c) Fikristudio 2014
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts/dropdown.js"></script>
+	<script src="js/scripts/scripts.js"></script>
+	<script src="js/scripts/validator.js"></script>
+</body>
+</html>

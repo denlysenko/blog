@@ -1,0 +1,75 @@
+<%- include('../blocks/top') %>
+<header>
+	<%- include('../blocks/nav_admin') %>
+</header>
+<div class="content">
+	<div>
+		<h4>Change Name</h4>
+		<form action="/admin/change_name" method="post">
+			<div class="form-group">
+				<label for="new_name">New Name</label>
+				<input type="name" name="newName" placeholder="Enter New Name" id="new_name" data-validate="required">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn">Change Name</button>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h4>Change Password</h4>
+		<form action="/admin/change_password" method="post">
+			<div class="form-group">
+				<label for="new_password">New Password</label>
+				<input type="password" name="newPassword" placeholder="Enter New Password" id="new_password" data-validate="required">
+			</div>
+			<div class="form-group">
+				<label for="check_password">Repeat Password</label>
+				<input type="password" name="checkPassword" placeholder="Repeat New Password" id="check_password" data-validate="required equal">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn">Change Password</button>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h4>Change Main Info</h4>
+		<form action="/admin/change_info" method="post">
+			<div class="form-group">
+				<label for="old_info">Current Info</label>
+				<textarea name="oldInfo" id="old_info"><%- user.info %></textarea>
+			</div>
+			<div class="form-group">
+				<label for="new_info">New Info</label>
+				<textarea name="newInfo" id="new_info" placeholder="Enter New Info" data-validate="required"></textarea>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn">Change Info</button>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h4>Change Avatar</h4>
+		<form action="/admin/change_avatar" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="avatar">Load Avatar</label>
+				<input type="file" name="avatar" id="avatar">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn">Change Avatar</button>
+			</div>
+		</form>
+	</div>
+	<div>
+		<h4>Change Logo</h4>
+		<form action="/admin/change_logo" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="logo">Load Logo</label>
+				<input type="file" name="logo" id="logo">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn">Change Logo</button>
+			</div>
+		</form>
+	</div>
+</div>
+<%- include('../blocks/bottom') %>

@@ -1,0 +1,30 @@
+<%- include('../../blocks/top') %>
+<header>
+	<%- include('../../blocks/nav_admin') %>
+</header>
+<div class="content">
+<div class="edit">
+	<% if(posts.length) { %>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Category</th>
+			<th>Preview</th>
+			<th>Date</th>
+			<th>Comments</th>
+			<th>Edit</th>
+		</tr>
+		<% posts.forEach(function(post) {%>
+			<tr>
+				<td><%= post.title %></td>
+				<td><%= post.category %></td>
+				<td><%= post.body %></td>
+				<td><%= post.created %></td>
+				<td><%= post._comments.length%> comments <a href="/admin/posts/<%= post._id %>/comments">Show Comments</a></td>
+				<td><a href="/admin/posts/edit/<%= post.id %>">Edit Post</a><a href="/admin/posts/delete/<%= post.id %>">Delete Post</a></td>
+			</tr>
+		<% }) %>	
+	</table>
+<% } %>	
+</div>
+<%- include('../../blocks/bottom') %>

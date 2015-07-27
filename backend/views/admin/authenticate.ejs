@@ -1,0 +1,15 @@
+<%- include('../blocks/top') %>
+	<div class="login">
+		<form action="/admin/auth" method="POST">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" name="username" placeholder="Username" data-validate="required">
+			</div>
+			<div class="form-group">
+				<label for="password">Enter Password</label>
+				<input type="password" name="password" placeholder="Enter Password" data-validate="required">
+			</div>
+			<button type="submit" class="btn">Authenticate</button>
+		</form>
+	</div>
+<%- include('../blocks/bottom') %>

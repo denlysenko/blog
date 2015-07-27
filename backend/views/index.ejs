@@ -1,0 +1,15 @@
+<%- include('blocks/top') %>
+<header>
+	<img src="<%= user.logo %>" height="403" width="1220" alt="header_bg">
+</header>
+<div class="container">
+	<%- include('blocks/nav') %>		
+		<div class="content">
+			<%- include('blocks/preview.ejs', {posts: posts})%>
+			<% if(page !== 'category' && count > num) { %>
+			<div class="load-more load-posts">
+				<a href="/posts/load_more" role="button" class="btn">Load More</a>
+			</div>
+			<% } %>
+		</div>
+<%- include('blocks/bottom') %>

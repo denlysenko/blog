@@ -1,0 +1,17 @@
+<div class="header">
+	<span class="date">
+		<%= post.date %>
+	</span>
+	<span class="category">
+		Cat:
+		<a href="/category/<%= post.category.toLowerCase() %>"><%= post.category %></a>
+	</span>
+	<span class="likes">
+		<a href="/post/<%= post._id%>/add_like"></a>
+		<span><%= post.likes %> Likes</span>
+	</span>
+	<span class="comments">
+		<a href="/post/<%= post.url%>#comments"></a>
+		<%= post._comments.length %> Comments
+	</span>
+</div>

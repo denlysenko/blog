@@ -1,0 +1,39 @@
+<div class="comments-section">
+	<div class="post-comment">
+		<h4>Post A Comment</h4>
+		<form action="/post/<%= post._id %>/send_comment" method="post">
+			<div class="form-row">
+				<div class="form-group">
+					<label for="name">Use Your Real Name</label>
+					<input type="text" name="name" placeholder="Name" id="name" data-validate="required">
+				</div>
+				<div class="form-group">
+					<input type="email" name="email" placeholder="Email" id="email" data-validate="required">
+					<label for="email">Email Will Not Published</label>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<label for="comment-text">Write a good comment</label>
+					<textarea name="comment" id="comment-text" placeholder="Comment" data-validate="required"></textarea>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group">
+					<button type="submit" class="btn">POST</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="comments-list" id="comments">
+	<% if(comments) { %>
+		<%- include('comment_item', {comments: comments}) %>
+	
+			<% if(post._comments.length > 2) { %>
+			<div class="load-more load-comments">
+				<a href="/<%= post._id %>/comments/load_more" role="button" class="btn more">Show More Comments</a>
+			</div>
+		<% } %>	
+	<% } %>	
+	</div>
+</div>

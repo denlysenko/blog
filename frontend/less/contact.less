@@ -1,0 +1,40 @@
+.contact .body {
+	margin-left: 0;
+	
+	h3 {
+		text-align: center;
+	}
+}
+
+#contact {
+	margin-top: 40px;
+	.form-group {
+		.make-row();
+	}
+	label {
+		.make-sm-column(3);
+		text-align: right;
+
+		@media(min-width: @screen-md-min) {
+			line-height: 40px;
+		}
+	}
+
+	input,
+	textarea {
+		.make-sm-column(8);
+		margin-bottom: 20px;
+	}
+
+	input {
+		height: 40px;
+	}
+
+	textarea {
+		height: 300px;
+	}
+
+	button {
+		.make-sm-column-offset(3);
+	}
+}
