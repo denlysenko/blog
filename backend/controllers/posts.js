@@ -56,12 +56,6 @@ exports.sendComment = function(req, res, next) {
 				if(err) return callback(err);
 				callback(null, comment);
 			});
-		},
-		function(comment, callback) {
-			comment.populate('_post', function(err, comment) {
-				if(err) return callback(err);
-				callback(null, comment);
-			})
 		}
 	], function(err, comment) {
 		if(err) return next(err);
